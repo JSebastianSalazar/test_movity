@@ -1,14 +1,36 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <form  [formGroup]="fb" >
+        <div padding>
+            <ion-label><b>Campos 1</b></ion-label>
   </div>
+  <div padding>
+    <ion-textarea formControlName="campos1" class="text" placeholder="Campo 1"></ion-textarea>
+  </div>
+  <div padding>
+      <ion-label><b>Campos 2</b></ion-label>
+  </div>
+  <div padding>
+    <ion-textarea formControlName="campo2" class="text" placeholder="Campo 2"></ion-textarea>
+  </div>
+  <div padding>
+    <ion-label><b> Campos 3 - Firma digital</b></ion-label>
+  </div>
+  <div padding class="pad">
+    <signature-pad   [options]="signaturePadOptions"
+                   (onEndEvent)="pintarFirma()"></signature-pad>
+  </div>
+        <br/>
+    <div>
+        <ion-label><b>Compartir</b></ion-label>
+    </div>
+    <div class="icons">
+        <div class="whatsapp-icon">
+            <ion-icon (click)="compartirWhatsapp()" style="zoom:3.0; color:green" name="logo-whatsapp"></ion-icon>
+        </div>
+        <div class="mail-icon">
+            <ion-icon (click)="compartirMail()" style="zoom:3.0; color:red" name="mail"></ion-icon>
+        </div>
+    </div>
+    </form>
 </ion-content>

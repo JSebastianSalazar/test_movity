@@ -1,1 +1,25 @@
+@import "../../theme/variables";
 
+.text {
+  background-color: $background_input;
+  border: $border_input;
+  text-align: $center_orientation;
+}
+.pad {
+  border:$border_input;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+.icons{
+  width: 100%;
+  display: inline-flex;
+  margin-top: 4%;
+}
+.whatsapp-icon{
+  width: 55%;
+  text-align: center;
+  svg{
+    fill: green;
+  }
+
+}

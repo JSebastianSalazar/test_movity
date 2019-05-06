@@ -1,5 +1,7 @@
 {
   "name": "test_movity",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
